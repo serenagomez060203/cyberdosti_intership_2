@@ -1,0 +1,159 @@
+Project 2: WOMEN SAFETY APP-
+Index.html:
+<!DOCTYPE html>: Declares the document type as HTML5.
+<html lang="en">: Begins the HTML document and sets the language attribute to English (en).
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Sets the viewport to make the page responsive by adjusting to the device's width and initial zoom level.
+<title>MCQ Quiz</title>: Sets the title of the web page that appears in the browser tab as "MCQ Quiz."<link rel="stylesheet" href="styles.css">: Links the external CSS file styles.css to apply styles to the HTML document.
+</head>: Closes the head section of the document.
+<body>: Begins the body section of the HTML document, which contains the content visible to users.
+<div class="container">: Creates a div element with the class container to wrap the main content and apply styles from the styles.css file.
+<h1>Cyber Security Quiz</h1>: Creates an h1 header element that displays "Cyber Security Quiz" as the main title of the quiz.
+<div id="quiz-container">: Creates a div element with the ID quiz-container to wrap all quiz questions.
+<div class="quiz-item">: Creates a div element with the class quiz-item to wrap an individual quiz question and its answer options.
+<p>1. What is the primary purpose of a firewall?</p>: Creates a paragraph element that displays the first quiz question.
+<input type="radio" name="q1" value="a" id="q1a">: Creates a radio button input for the first answer option of question 1.
+name="q1": Groups all answer options for question 1.
+value="a": Sets the value of this option as "a".
+id="q1a": Assigns a unique ID to this radio button for labeling.
+<label for="q1a">a) To detect malware</label><br>: Creates a label for the radio button with the ID q1a, displaying the text "a) To detect malware." Adds a line break after the label.
+<input type="radio" name="q1" value="b" id="q1b">: Creates a radio button input for the second answer option of question 1.
+name="q1": Groups all answer options for question 1.
+value="b": Sets the value of this option as "b".
+id="q1b": Assigns a unique ID to this radio button for labeling.
+<label for="q1b">b) To block unauthorized access</label><br>: Creates a label for the radio button with the ID q1b, displaying the text "b) To block unauthorized access." Adds a line break after the label.
+<input type="radio" name="q1" value="c" id="q1c">: Creates a radio button input for the third answer option of question 1.
+name="q1": Groups all answer options for question 1.
+value="c": Sets the value of this option as "c".
+id="q1c": Assigns a unique ID to this radio button for labeling.
+<label for="q1c">c) To encrypt data</label><br>: Creates a label for the radio button with the ID q1c, displaying the text "c) To encrypt data." Adds a line break after the label.
+<input type="radio" name="q1" value="d" id="q1d">: Creates a radio button input for the fourth answer option of question 1.
+name="q1": Groups all answer options for question 1.
+value="d": Sets the value of this option as "d".
+id="q1d": Assigns a unique ID to this radio button for labeling.
+<label for="q1d">d) To monitor user activity</label><br>: Creates a label for the radio button with the ID q1d, displaying the text "d) To monitor user activity." Adds a line break after the label.
+</div>: Closes the div element with the class quiz-item for the first quiz question.
+
+
+styles.css:
+* { ... }: The universal selector * applies the following styles to all elements.
+box-sizing: border-box;: Sets the box-sizing property to border-box, which includes padding and border within the element's width and height.
+margin: 0;: Removes any default margin from all elements.
+padding: 0;: Removes any default padding from all elements.
+body { ... }: Styles the body element, which is the main container for the page content.
+font-family: Arial, sans-serif;: Sets the font of the body text to Arial, with a fallback to any available sans-serif font.
+background-color: #f4f4f4;: Sets the background color of the body to a light gray (#f4f4f4).
+color: #333;: Sets the text color to dark gray (#333).
+line-height: 1.6;: Sets the line height of the text to 1.6 times the font size, making the text more readable.
+.container { ... }: Styles elements with the container class, which wraps the main content of the quiz.
+max-width: 800px;: Limits the container's maximum width to 800 pixels.
+margin: 20px auto;: Adds 20 pixels of margin at the top and bottom and centers the container horizontally.
+padding: 20px;: Adds 20 pixels of padding inside the container.
+background-color: #fff;: Sets the background color of the container to white (#fff).
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);: Adds a subtle shadow around the container to give it a slightly elevated appearance.
+border-radius: 10px;: Rounds the corners of the container with a 10-pixel radius.
+h1 { ... }: Styles h1 header elements.
+text-align: center;: Centers the header text horizontally.
+margin-bottom: 20px;: Adds 20 pixels of margin below the header.
+color: #007bff;: Sets the text color to a bright blue (#007bff).
+.quiz-item { ... }: Styles elements with the quiz-item class, which wrap each quiz question and its options.
+margin-bottom: 20px;: Adds 20 pixels of margin below each quiz item, separating them from each other.
+input[type="radio"] { ... }: Styles radio button input elements.
+margin-right: 10px;: Adds 10 pixels of space to the right of each radio button, separating it from its label.
+button { ... }: Styles button elements.
+display: block;: Displays the button as a block-level element, making it take up the full width of its container.
+width: 100%;: Sets the button's width to 100% of its parent container.
+padding: 10px;: Adds 10 pixels of padding inside the button.
+background-color: #007bff;: Sets the button's background color to bright blue (#007bff).
+color: #fff;: Sets the button text color to white (#fff).
+border: none;: Removes the default border of the button.
+border-radius: 5px;: Rounds the corners of the button with a 5-pixel radius.
+cursor: pointer;: Changes the cursor to a pointer when hovering over the button, indicating it is clickable.
+font-size: 16px;: Sets the button's text size to 16 pixels.
+margin-top: 20px;: Adds 20 pixels of margin above the button, separating it from the content above.
+button:hover { ... }: Styles button elements when the user hovers over them with the mouse.
+background-color: #0056b3;: Changes the background color to a darker shade of blue (#0056b3) when the button is hovered over.
+
+Project 1: SECURITY QUIZ WEB APP-
+script.js:
+document.getElementById('submit').addEventListener('click', function() { ... }): Adds an event listener to the element with the ID submit. When this element (a button) is clicked, the function inside the event listener is executed.
+let correctAnswers = 0;: Initializes a variable correctAnswers to keep track of the number of correct answers, starting at 0.
+let totalQuestions = 3;: Initializes a variable totalQuestions to represent the total number of quiz questions, which is set to 3.
+const quizAnswers = { ... }: Defines an object quizAnswers that holds the correct answers for each question in the quiz.
+q1: 'b': The correct answer for question 1 is option b.
+q2: 'a': The correct answer for question 2 is option a.
+q3: 'c': The correct answer for question 3 is option c.
+for (let i = 1; i <= totalQuestions; i++) { ... }: Starts a for loop that iterates over each question from 1 to totalQuestions (3 in this case).
+let userAnswer = document.querySelector(\input[name="q${i}"]
+`);: Finds the radio button that is selected (checked) for the current question (q1, q2`, etc.) using a template literal to dynamically generate the selector.
+if (userAnswer && userAnswer.value === quizAnswers[\q${i}`]) { ... }: Checks if a radio button is selected for the current question and if its value matches the correct answer in quizAnswers`.
+correctAnswers++;: Increments the correctAnswers counter by 1 if the selected answer is correct.
+}: Closes the for loop that iterates over each question.
+alert(\You got ${correctAnswers} out of ${totalQuestions} correct!`);`: Displays an alert box with a message showing how many questions the user answered correctly out of the total questions.
+});: Closes the event listener function and the click event handler.
+
+index.html:
+<div class="quiz-item">: Begins a new quiz item (question) in the same format as the previous one.
+<p>2. What is phishing?</p>: Displays the second quiz question: "What is phishing?".
+<input type="radio" name="q2" value="a" id="q2a">: Radio button for option a (grouped under name="q2").
+<label for="q2a">a) A technique used to obtain sensitive information</label><br>: Label for option a.
+<input type="radio" name="q2" value="b" id="q2b">: Radio button for option b.
+<label for="q2b">b) A type of encryption method</label><br>: Label for option b.
+<input type="radio" name="q2" value="c" id="q2c">: Radio button for option c.
+<label for="q2c">c) A software update process</label><br>: Label for option c.
+<input type="radio" name="q2" value="d" id="q2d">: Radio button for option d.
+<label for="q2d">d) A network security protocol</label><br>: Label for option d.
+<div class="quiz-item">: Begins another quiz item (question).
+<p>3. What does SSL stand for?</p>: Displays the third quiz question: "What does SSL stand for?".
+<input type="radio" name="q3" value="a" id="q3a">: Radio button for option a.
+<label for="q3a">a) Secure Socket Layer</label><br>: Label for option a.
+<input type="radio" name="q3" value="b" id="q3b">: Radio button for option b.
+<label for="q3b">b) System Security Layer</label><br>: Label for option b.
+<input type="radio" name="q3" value="c" id="q3c">: Radio button for option c.
+<label for="q3c">c) Secure Sockets Layer</label><br>: Label for option c.
+<input type="radio" name="q3" value="d" id="q3d">: Radio button for option d.
+<label for="q3d">d) Safe Socket Layer</label><br>: Label for option d.
+</div>: Closes the div element with the ID quiz-container and class container.
+<button id="submit">Submit</button>: Creates a button with the ID submit that users click to submit their quiz answers.
+</div>: Closes the div element with the class container.
+</body>: Closes the body section of the HTML document.
+</html>: Closes the HTML document.
+
+styles.css:
+* { ... }: The universal selector * applies the following styles to all elements.
+box-sizing: border-box;: Sets the box-sizing property to border-box, meaning padding and border are included within the element's width and height.
+margin: 0;: Removes any default margin from all elements.
+padding: 0;: Removes any default padding from all elements.
+body { ... }: Styles the body element, which contains all the page content.
+font-family: Arial, sans-serif;: Sets the font of the body text to Arial, with a fallback to any available sans-serif font.
+background-color: #f4f4f4;: Sets the background color of the body to a light gray (#f4f4f4).
+color: #333;: Sets the text color to dark gray (#333).
+line-height: 1.6;: Sets the line height of the text to 1.6 times the font size for better readability.
+.container { ... }: Styles elements with the container class, which likely wraps the main content.
+max-width: 800px;: Limits the container's maximum width to 800 pixels.
+margin: 20px auto;: Adds 20 pixels of margin at the top and bottom, and centers the container horizontally.
+padding: 20px;: Adds 20 pixels of padding inside the container.
+background-color: #fff;: Sets the background color of the container to white (#fff).
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);: Adds a subtle shadow around the container to give it a slightly elevated appearance.
+border-radius: 10px;: Rounds the corners of the container with a 10-pixel radius.
+h1 { ... }: Styles h1 header elements.
+text-align: center;: Centers the header text horizontally.
+margin-bottom: 20px;: Adds 20 pixels of margin below the header.
+color: #007bff;: Sets the text color to a bright blue (#007bff).
+.quiz-item { ... }: Styles elements with the quiz-item class, which likely wrap each quiz question.
+margin-bottom: 20px;: Adds 20 pixels of margin below each quiz item to separate them from each other.
+input[type="radio"] { ... }: Styles radio button input elements.
+margin-right: 10px;: Adds 10 pixels of space to the right of each radio button, separating it from its label.
+button { ... }: Styles button elements.
+display: block;: Displays the button as a block-level element, making it take up the full width of its container.
+width: 100%;: Sets the button's width to 100% of its parent container.
+padding: 10px;: Adds 10 pixels of padding inside the button.
+background-color: #007bff;: Sets the button's background color to bright blue (#007bff).
+color: #fff;: Sets the button text color to white (#fff).
+border: none;: Removes the default border of the button.
+border-radius: 5px;: Rounds the corners of the button with a 5-pixel radius.
+cursor: pointer;: Changes the cursor to a pointer when hovering over the button, indicating it is clickable.
+font-size: 16px;: Sets the button's text size to 16 pixels.
+margin-top: 20px;: Adds 20 pixels of margin above the button, separating it from the content above.
+button:hover { ... }: Styles button elements when the user hovers over them.
+background-color: #0056b3;: Changes the background color to a darker shade of blue (#0056b3) when the button is hovered over.
+
