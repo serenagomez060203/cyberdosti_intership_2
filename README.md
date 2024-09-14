@@ -1,4 +1,4 @@
-# CYBERDOSTI INTERNSHIP MONTH 2
+# INTERNSHIP MONTH 2
 
 
 ## Project 1: Security Quiz Web App
